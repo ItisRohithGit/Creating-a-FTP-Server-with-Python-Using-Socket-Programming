@@ -1,0 +1,55 @@
+**FTP Server and Client Using Python**
+
+This project demonstrates a simple implementation of an FTP (File Transfer Protocol) server and client using Python and socket programming. The FTP server allows clients to download files from the server. The server and client communicate over the network using sockets, enabling file transfer between them.
+
+**Project Structure:**
+- `server.py`: This file contains the implementation of the FTP server.
+- `client.py`: This file contains the implementation of the FTP client.
+
+**Requirements:**
+- Python 3.x
+
+**Getting Started:**
+1. Clone or download the project repository to your local machine.
+2. Make sure you have Python 3.x installed on your system.
+
+**Running the FTP Server:**
+1. Open a terminal or command prompt.
+2. Navigate to the project directory containing `server.py`.
+3. Run the following command to start the FTP server:
+   ```
+   python server.py
+   ```
+4. Enter the desired port number for the server to listen to.
+5. The server will start running and will display its IP and port information.
+
+**Running the FTP Client:**
+1. Open another terminal or command prompt.
+2. Navigate to the project directory containing `client.py`.
+3. Run the following command to start the FTP client:
+   ```
+   python client.py
+   ```
+4. Enter the IP address and port number of the FTP server to connect to.
+
+**Using the FTP Client:**
+1. After connecting to the server, the client will prompt you to enter the name of the file you want to download from the server.
+2. Type the name of the file you want to download and press Enter.
+3. If the file exists on the server, the client will download it to the local directory with a name prepended by "from_server" (e.g., `from_server_file.txt`).
+4. If the file doesn't exist on the server, the client will display a message indicating that the file doesn't exist.
+5. The client will automatically disconnect from the server after each download.
+
+**Important Notes:**
+- This is a basic implementation of an FTP server and client for educational purposes. It lacks advanced features and security measures.
+- The server and client communicate using sockets, and the file transfer is done in binary mode.
+- The server allows multiple clients to connect simultaneously using threading.
+- The client allows downloading files from the server; it does not support uploading files to the server in this implementation.
+- The server's root directory for file access is set in the `FTP_ROOT_DIR` variable of `server.py`. Make sure to change it to the desired directory.
+
+**Security Considerations:**
+- This project lacks proper security features, such as encryption and authentication. It should not be used in a production environment or over the public internet without further security enhancements.
+
+**Disclaimer:**
+This FTP server and client implementation is for educational purposes only. It may contain vulnerabilities and is not suitable for production use. Use it responsibly and at your own risk.
+
+Feel free to explore and enhance this project to add more functionality, error handling, and security features to make it more robust and suitable for practical use.
